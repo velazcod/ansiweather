@@ -29,16 +29,19 @@ Config options can also be set in ~/.ansiweatherrc
 
 Example : `~/.ansiweatherrc`
 
-	location:Moscow,RU
+	location:5391959
 	fetch_cmd:ftp -V -o -
 	units:metric
         
 
 ### Location
 
-Example : `Moscow,RU`
+Example : `5391959`
 
-	location:Moscow,RU
+	location:5391959
+	
+Find your city ID by making this call and replacing the 'q' param with your city name and state:
+http://api.openweathermap.org/data/2.5/find?q=San%20Francisco%2CCA&mode=json
 
 ### System of Units
 
