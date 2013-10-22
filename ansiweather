@@ -35,7 +35,7 @@ function get_config {
 }
 
 # Location : example "Moscow,RU"
-location=$(get_config "location" || echo "Moscow,RU")
+location=$(get_config "location" || echo "5391959")
 
 # System of Units : "metric" or "imperial"
 units=$(get_config "units" || echo "metric")
@@ -67,7 +67,7 @@ rain=$(get_config "rain" || echo "\xe2\x98\x94")
 
 fetch_cmd=$(get_config "fetch_cmd" || echo "curl -s")
 
-weather=$($fetch_cmd http://api.openweathermap.org/data/2.5/weather?q=$location\&units=$units)
+weather=$($fetch_cmd http://api.openweathermap.org/data/2.5/weather?id=$location\&units=$units)
 
 
 
